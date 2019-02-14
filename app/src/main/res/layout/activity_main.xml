@@ -10,8 +10,8 @@
     <EditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Hello World!"
             android:gravity="top"
+            android:hint="書け書け〜〜〜〜〜"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
