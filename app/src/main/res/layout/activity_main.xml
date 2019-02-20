@@ -14,15 +14,17 @@
             android:layout_weight="1"
             android:gravity="top"
             android:hint="書け書け〜〜〜〜〜"
+            android:id="@+id/text_area"
             />
 
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="140"
+            android:text="0"
             android:textSize="16sp"
             android:textAlignment="viewEnd"
             android:paddingEnd="16dp"
+            android:id="@+id/text_count"
             />
 
     <LinearLayout
@@ -43,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/ic_instagram"
+                android:id="@+id/button_instagram"
                 />
 
         <ImageButton
@@ -50,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/ic_share_black_24dp"
+                android:id="@+id/button_share"
                 />
 
         <ImageButton
@@ -57,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/ic_content_copy_black_24dp"
+                android:id="@+id/button_copy"
                 />
 
         <ImageButton
@@ -64,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:src="@drawable/ic_save_black_24dp"
+                android:id="@+id/button_save"
                 />
 
     </LinearLayout>
