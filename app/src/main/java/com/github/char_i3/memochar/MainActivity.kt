@@ -1,5 +1,8 @@
 package com.github.char_i3.memochar
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
@@ -22,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonTwitter = findViewById<ImageButton>(R.id.button_twitter)
         val buttonInstagram = findViewById<ImageButton>(R.id.button_instagram)
-        val butttonShare = findViewById<ImageButton>(R.id.button_share)
+        val buttonShare = findViewById<ImageButton>(R.id.button_share)
         val buttonCopy = findViewById<ImageButton>(R.id.button_copy)
         val buttonSave = findViewById<ImageButton>(R.id.button_save)
 
@@ -50,6 +53,26 @@ class MainActivity : AppCompatActivity() {
 
         // Instaguramボタンを押下したときの処理
         buttonInstagram.setOnClickListener {
+
+        }
+
+        // shareボタンを押下したときの処理
+        buttonShare.setOnClickListener {
+
+        }
+
+        // copyボタンを押下したときの処理
+        buttonCopy.setOnClickListener {
+
+            // クリップボードにコピー
+            val clipboardManager =
+                getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            clipboardManager.primaryClip = ClipData.newPlainText("", textArea.text)
+
+        }
+
+        // saveボタンを押下したときの処理
+        buttonSave.setOnClickListener {
 
         }
     }
