@@ -3,6 +3,8 @@ package com.github.char_i3.memochar
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
@@ -25,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         val buttonTwitter = findViewById<ImageButton>(R.id.button_twitter)
         val buttonInstagram = findViewById<ImageButton>(R.id.button_instagram)
+        val buttonLine = findViewById<ImageButton>(R.id.button_line)
         val buttonShare = findViewById<ImageButton>(R.id.button_share)
         val buttonCopy = findViewById<ImageButton>(R.id.button_copy)
         val buttonSave = findViewById<ImageButton>(R.id.button_save)
@@ -56,8 +59,20 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        // LINEボタンを押下したときの処理
+        buttonLine.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("line://msg/text/" + Uri.encode(textArea.text.toString()))
+            startActivity(intent)
+        }
+
         // shareボタンを押下したときの処理
         buttonShare.setOnClickListener {
+
+            val intent = Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            intent.putExtra(Intent.EXTRA_TEXT, textArea.text)
+            startActivity(intent)
 
         }
 

@@ -52,6 +52,14 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:src="@drawable/ic_line"
+                android:id="@+id/button_line"
+                />
+
+        <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:src="@drawable/ic_share_black_24dp"
                 android:id="@+id/button_share"
                 />
