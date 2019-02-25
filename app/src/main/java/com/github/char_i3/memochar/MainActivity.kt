@@ -9,11 +9,9 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         val textCount = findViewById<TextView>(R.id.text_count)
 
         val buttonTwitter = findViewById<ImageButton>(R.id.button_twitter)
-        val buttonInstagram = findViewById<ImageButton>(R.id.button_instagram)
         val buttonLine = findViewById<ImageButton>(R.id.button_line)
         val buttonShare = findViewById<ImageButton>(R.id.button_share)
         val buttonCopy = findViewById<ImageButton>(R.id.button_copy)
@@ -50,13 +47,11 @@ class MainActivity : AppCompatActivity() {
 
         // Twitterボタンを押下したときの処理
         buttonTwitter.setOnClickListener {
-            Toast.makeText(this@MainActivity, "ついった！", Toast.LENGTH_LONG).show()
-            Log.d("char", "ついった！！")
-        }
+            val url = "https://twitter.com/share?text=${textArea.text}"
+            val intent =
+                Intent(Intent.ACTION_VIEW, Uri.parse(url))
 
-        // Instaguramボタンを押下したときの処理
-        buttonInstagram.setOnClickListener {
-
+            startActivity(intent)
         }
 
         // LINEボタンを押下したときの処理

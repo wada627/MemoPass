@@ -15,7 +15,10 @@
             android:gravity="top"
             android:hint="書け書け〜〜〜〜〜"
             android:id="@+id/text_area"
-            />
+            >
+
+        <requestFocus/>
+    </EditText>
 
     <TextView
             android:layout_width="match_parent"
@@ -38,14 +41,6 @@
                 android:layout_weight="1"
                 android:src="@drawable/ic_twitter"
                 android:id="@+id/button_twitter"
-                />
-
-        <ImageButton
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:src="@drawable/ic_instagram"
-                android:id="@+id/button_instagram"
                 />
 
         <ImageButton
