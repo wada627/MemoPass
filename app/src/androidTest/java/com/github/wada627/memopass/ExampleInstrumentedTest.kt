@@ -1,4 +1,4 @@
-package com.github.char_i3.memochar
+package com.github.wada627.memopass
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.github.char_i3.memochar"
+        applicationId "com.github.wada627.memopass"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

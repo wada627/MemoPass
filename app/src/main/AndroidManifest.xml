@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.github.char_i3.memochar">
+          package="com.github.wada627.memopass">
 
     <application
             android:allowBackup="false"
@@ -12,7 +12,7 @@
             android:theme="@style/AppTheme"
             tools:ignore="GoogleAppIndexingWarning">
         <activity
-                android:name=".MainActivity"
+                android:name="com.github.wada627.memopass.MainActivity"
                 android:windowSoftInputMode="stateVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

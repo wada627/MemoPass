@@ -1,4 +1,4 @@
-package com.github.char_i3.memochar
+package com.github.wada627.memopass
 
 import android.content.ClipData
 import android.content.ClipboardManager
